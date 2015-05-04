@@ -24,7 +24,7 @@
         brokerName="<%= scope.lookupvar('::clientcert') -%>"
         schedulePeriodForDestinationPurge="60000"
         networkConnectorStartAsync="true"
-        dataDirectory="${activemq.data}"
+        dataDirectory="/usr/share/activemq/data"
 <% if( @use_jmx ) then -%>
         useJmx="true"
         populateJMSXUserID="true"
@@ -98,7 +98,7 @@
             http://activemq.apache.org/persistence.html 
         -->
         <persistenceAdapter>
-            <kahaDB directory="${activemq.data}/kahadb"/>
+            <kahaDB directory="/usr/share/activemq/data/kahadb"/>
         </persistenceAdapter>
 
         <plugins>
